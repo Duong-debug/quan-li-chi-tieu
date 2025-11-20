@@ -1,0 +1,14 @@
+{
+  "/(authenticated)/ai/page": "app/(authenticated)/ai/page.js",
+  "/(authenticated)/budgets/page": "app/(authenticated)/budgets/page.js",
+  "/(authenticated)/categories/page": "app/(authenticated)/categories/page.js",
+  "/(authenticated)/dashboard/page": "app/(authenticated)/dashboard/page.js",
+  "/(authenticated)/expenses/page": "app/(authenticated)/expenses/page.js",
+  "/(authenticated)/goals/page": "app/(authenticated)/goals/page.js",
+  "/(authenticated)/income/page": "app/(authenticated)/income/page.js",
+  "/(authenticated)/recurring/page": "app/(authenticated)/recurring/page.js",
+  "/(authenticated)/reports/page": "app/(authenticated)/reports/page.js",
+  "/(authenticated)/settings/page": "app/(authenticated)/settings/page.js",
+  "/(authenticated)/users/page": "app/(authenticated)/users/page.js",
+  "/page": "app/page.js"
+}
