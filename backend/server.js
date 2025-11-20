@@ -10,7 +10,40 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+// CORS Configuration - Allow localhost and Vercel domains
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'https://expense-management-app.vercel.app',
+      // Allow all Vercel preview deployments
+      /\.vercel\.app$/
+    ];
+
+    const isAllowed = allowedOrigins.some(allowed => {
+      if (typeof allowed === 'string') {
+        return origin === allowed;
+      }
+      // For RegExp patterns
+      return allowed.test(origin);
+    });
+
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // MongoDB Connection
