@@ -329,13 +329,6 @@ expense-management-app/
     └── POSTMAN_API_TESTING.md         # Hướng dẫn test API
 ```
 
-## 📚 Tài Liệu Bổ Sung
-
-- **[DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md)**: Chi tiết về cấu trúc database, collections, và relationships
-- **[AI_IMPLEMENTATION_GUIDE.md](./AI_IMPLEMENTATION_GUIDE.md)**: Hướng dẫn implement và tùy chỉnh AI features
-- **[GEMINI_API_KEY_GUIDE.md](./GEMINI_API_KEY_GUIDE.md)**: Hướng dẫn lấy Google Gemini API key
-- **[POSTMAN_API_TESTING.md](./POSTMAN_API_TESTING.md)**: Collection API endpoints để test
-
 ## 🔐 Bảo Mật
 
 - ✅ Password được hash bằng bcryptjs
