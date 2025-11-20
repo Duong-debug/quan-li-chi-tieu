@@ -40,7 +40,7 @@ export default function Dashboard() {
   const fetchDashboardData = async () => {
     try {
       setLoading(true);
-      
+
       // Fetch all transactions
       const response = await api.get('/transactions');
       const transactions = response.data;
@@ -48,10 +48,10 @@ export default function Dashboard() {
       // Calculate totals
       const incomes = transactions.filter((t: any) => t.type === 'income');
       const expenses = transactions.filter((t: any) => t.type === 'expense');
-      
+
       const incomeTotal = incomes.reduce((sum: number, t: any) => sum + t.amount, 0);
       const expenseTotal = expenses.reduce((sum: number, t: any) => sum + t.amount, 0);
-      
+
       setTotalIncome(incomeTotal);
       setTotalExpense(expenseTotal);
       setBalance(incomeTotal - expenseTotal);
@@ -78,7 +78,7 @@ export default function Dashboard() {
       // Calculate monthly data (last 6 months)
       const monthlyMap: any = {};
       const now = new Date();
-      
+
       for (let i = 5; i >= 0; i--) {
         const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
         const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
@@ -89,7 +89,7 @@ export default function Dashboard() {
       transactions.forEach((t: any) => {
         const date = new Date(t.date);
         const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-        
+
         if (monthlyMap[monthKey]) {
           if (t.type === 'income') {
             monthlyMap[monthKey].income += t.amount;
@@ -215,7 +215,11 @@ export default function Dashboard() {
                   fontSize={12}
                   tickLine={false}
                   axisLine={false}
-                  tickFormatter={(value) => `${value / 1000}k`}
+                  tickFormatter={(value) => {
+                    if (value >= 1000000) return `${(value / 1000000).toFixed(1).replace(/\.0$/, '')}M`;
+                    if (value >= 1000) return `${(value / 1000).toFixed(1).replace(/\.0$/, '')}k`;
+                    return value;
+                  }}
                 />
                 <Tooltip
                   contentStyle={{ backgroundColor: 'var(--background)', borderRadius: '8px', border: '1px solid var(--border)' }}

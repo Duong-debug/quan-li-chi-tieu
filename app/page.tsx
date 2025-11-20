@@ -14,7 +14,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <HeroSection />
       <div className="flex-1">
         <AuthLayout
           title={isLogin ? t('auth.loginTitle') : t('auth.registerTitle')}
@@ -27,7 +26,6 @@ export default function Home() {
           )}
         </AuthLayout>
       </div>
-      <Footer />
     </div>
   );
 }
