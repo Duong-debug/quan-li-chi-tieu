@@ -1,39 +1,6 @@
 {
   "app": {
-    "[project]/app/(authenticated)/ai/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/budgets/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/categories/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/dashboard/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
     "[project]/app/(authenticated)/expenses/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/goals/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/income/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/recurring/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/reports/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/settings/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/(authenticated)/users/page": [
-      "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
-    ],
-    "[project]/app/page": [
       "static/media/4a7551bcc3548e67-s.p.717db902.woff2"
     ]
   },
